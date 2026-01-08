@@ -3,66 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veerendra - Portfolio</title>
+    <title>Veerendra Yerukali | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0d6efd;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 2px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* MOBILE MENU */
+        .menu {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* HEADER */
+        header {
+            height: 100vh;
+            background: linear-gradient(135deg, #0d6efd, #003c8f);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* SKILLS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        /* CONTACT */
+        .contact a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #0d6efd;
+                flex-direction: column;
+                width: 200px;
+                display: none;
+                padding: 20px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Veerendra Yerukali</h1>
 
-    <!-- About Me Section -->
-    <section>
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Veerendra</h2>
+        <div class="menu" onclick="toggleMenu()">☰</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <header id="home">
+        <div>
+            <h1>Veerendra Yerukali</h1>
+            <p>B.Tech CSE | Web Developer | Problem Solver</p>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hi, I'm Veerendra, a passionate and driven B.Tech 3rd-year student specializing in 
-            Computer Science and Engineering. I have a strong interest in web development and 
-            love building websites that are both functional and visually appealing. I enjoy turning 
-            ideas into real-world applications using modern web technologies.
-        </p>
+        <div class="card">
+            <p>
+                I am a passionate B.Tech 3rd-year Computer Science student who enjoys building
+                interactive, responsive, and user-friendly web applications using modern
+                technologies.
+            </p>
+        </div>
     </section>
 
-    <!-- Skills and Interests -->
-    <section>
+    <!-- SKILLS -->
+    <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Java</li>
-            <li>Python Basics</li>
-        </ul>
-
-        <h2>Interests</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Developing Projects</li>
-            <li>Problem Solving</li>
-        </ul>
+        <div class="grid">
+            <div class="card">HTML & CSS</div>
+            <div class="card">Java</div>
+            <div class="card">Python Basics</div>
+            <div class="card">Problem Solving</div>
+        </div>
     </section>
 
-    <!-- Projects Section -->
-    <section>
+    <!-- PROJECTS -->
+    <section id="projects">
         <h2>Projects</h2>
-        <h3>Personal Portfolio Website</h3>
-        <p>A simple personal portfolio website built using HTML to showcase my skills and projects.</p>
 
-        <h3>Student Management System</h3>
-        <p>A Java-based application for managing student information efficiently.</p>
+        <div class="card">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+                A responsive portfolio website with interactive navigation,
+                smooth scrolling, and modern UI.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Weather Checking Application</h3>
+            <p>
+                A weather checking web application that allows users to search
+                for any city and view real-time weather details such as temperature,
+                humidity, and weather conditions using an external API.
+            </p>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section>
-        <h2>Contact Me</h2>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
         <p>Email: <a href="mailto:vveerendra006@gmail.com">vveerendra006@gmail.com</a></p>
-        <p>
-            LinkedIn: 
-            <a href="https://www.linkedin.com/in/yerukali-veerendra-712432293" target="_blank">
-                linkedin.com/in/yerukali-veerendra-712432293
-            </a>
-        </p>
-        <p>
-            GitHub: 
-            <a href="https://github.com/Veerendra-Siri-Mahesh" target="_blank">
-                github.com/Veerendra-Siri-Mahesh
-            </a>
-        </p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yerukali-veerendra-712432293" target="_blank">View Profile</a></p>
+        <p>GitHub: <a href="https://github.com/Veerendra-Siri-Mahesh" target="_blank">View GitHub</a></p>
     </section>
+
+    <footer>
+        © 2026 Veerendra Yerukali | All Rights Reserved
+    </footer>
+
+    <!-- JS -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("show");
+        }
+    </script>
+
 </body>
 </html>
