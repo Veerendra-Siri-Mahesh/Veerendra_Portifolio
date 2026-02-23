@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend with no implemented methods or state.",
+  "feature_evidence.json": "Feature evidence report documenting seven implemented portfolio features (hero, about, skills, projects, experience, competitive programming, footer) with associated files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of all frontend files describing component purposes, styling approach, and configuration details.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH-based color system defining light and dark mode CSS custom properties for a comprehensive design token palette.",
+  "frontend/index.html": "Minimal HTML entry point with root div and module script reference to main.tsx for React application mounting.",
+  "frontend/src/App.tsx": "Root React component rendering the complete portfolio layout with seven sequential sections from hero to footer.",
+  "frontend/src/components/AboutSection.tsx": "About section component displaying education, technical focus, and career goals in three interactive cards with icons, plus an additional info panel.",
+  "frontend/src/components/CompetitiveProgrammingSection.tsx": "Competitive programming section featuring a two-column layout with illustration image and four highlight cards covering DSA practice, problem-solving, and continuous improvement.",
+  "frontend/src/components/ExperienceSection.tsx": "Experience section showcasing VaultsOfCodes internship with role details, technology badges, and a grid of key learnings with checkmark icons.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying copyright notice and attribution link to caffeine.ai with dynamic UTM parameters based on hostname.",
+  "frontend/src/components/HeroSection.tsx": "Hero section component displaying a full-screen introduction with background image, animated grid, student badge, heading, stats (3rd year, DSA, Java), and CTA buttons to scroll to projects and about sections.",
+  "frontend/src/components/ProjectsSection.tsx": "Projects section component showcasing a featured Weather Application project with description, technology badges (HTML, CSS, JavaScript, Weather API), key features with icons, and highlights about API integration and responsive design.",
+  "frontend/src/components/SkillsSection.tsx": "Skills section component displaying technical skills organized into three categories (Programming Languages, Web Development, Tools & Technologies) with proficiency indicators and a legend distinguishing proficient vs foundational skills.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and manages an authenticated or anonymous backend actor using Internet Identity, with automatic query invalidation when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient lifecycle with configurable options for idle handling and derivation origins.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file indicating no backend query methods are needed since all portfolio data is static and rendered directly in components.",
+  "frontend/src/index.css": "Global CSS file with Tailwind directives, custom CSS variables for light/dark theme colors (deep slate and cyan accent scheme), smooth scrolling, and a grid pattern utility for the hero background.",
+  "frontend/src/main.tsx": "Application entry point that sets up React root with QueryClient and InternetIdentityProvider wrappers, then renders the main App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration file defining custom theme extensions including OKLCH color system with CSS variables, custom fonts (Inter, JetBrains Mono), border radius variables, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Project state file tracking a personal portfolio website for a Computer Science Engineering student, documenting existing features including hero, about, skills, projects, experience, and competitive programming sections with their corresponding requirement IDs."
+}
